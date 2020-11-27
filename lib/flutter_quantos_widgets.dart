@@ -1,4 +1,4 @@
-library quantos_flutter_widgets;
+library flutter_quantos_widgets;
 
 export 'src/widgets/widgets.dart';
 export 'src/classes/classes.dart';
