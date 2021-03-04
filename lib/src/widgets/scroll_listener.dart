@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:throttling/throttling.dart';
+import 'package:flutter_throttling/flutter_throttling.dart';
 
 class ScrollListener extends StatelessWidget {
 
