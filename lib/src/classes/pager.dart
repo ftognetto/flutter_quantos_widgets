@@ -30,14 +30,14 @@ class Pager {
 
 class PagerCursor {
 
-  String _cursor;
+  String? _cursor;
   int _limit;
 
   PagerCursor(int limit):
     _limit = limit ?? 20;
   
-  String get cursor => _cursor;
-  set cursor(String cursor) => _cursor = cursor;
+  String? get cursor => _cursor;
+  set cursor(String? cursor) => _cursor = cursor;
 
   void reset() {
     _cursor = null;

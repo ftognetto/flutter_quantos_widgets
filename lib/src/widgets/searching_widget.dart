@@ -10,11 +10,11 @@ class SearchingWidget extends StatelessWidget {
   /// returns [loadinWidget] or [CenterLoading] otherwise
 
   final bool loadedAll;
-  final Widget noResultsWidget;
-  final Widget loadingWidget;
-  final String platform;
+  final Widget? noResultsWidget;
+  final Widget? loadingWidget;
+  final String? platform;
 
-  const SearchingWidget({Key key, @required this.loadedAll, this.noResultsWidget, this.loadingWidget, this.platform}) : super(key: key);
+  const SearchingWidget({Key? key, required this.loadedAll, this.noResultsWidget, this.loadingWidget, this.platform}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

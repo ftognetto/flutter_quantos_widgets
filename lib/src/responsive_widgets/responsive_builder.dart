@@ -4,12 +4,12 @@ import 'package:flutter_quantos_widgets/src/responsive_widgets/breakpoints.dart'
 
 class ResponsiveBuilder extends StatelessWidget {
 
-  final Widget Function(BuildContext, Widget) large;
-  final Widget Function(BuildContext, Widget) medium;
-  final Widget Function(BuildContext, Widget) small;
-  final Widget child;
+  final Widget Function(BuildContext, Widget?) large;
+  final Widget Function(BuildContext, Widget?)? medium;
+  final Widget Function(BuildContext, Widget?)? small;
+  final Widget? child;
 
-  const ResponsiveBuilder({Key key, @required this.large, this.medium, this.small, this.child}) : super(key: key);
+  const ResponsiveBuilder({Key? key, required this.large, this.medium, this.small, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +18,10 @@ class ResponsiveBuilder extends StatelessWidget {
       return large(context, child);
     }
     else if ( currentWidth < Breakpoints.instance.desktop && currentWidth >= Breakpoints.instance.tablet) {
-      return medium != null ? medium(context, child) : large(context, child);
+      return medium != null ? medium!(context, child) : large(context, child);
     }
     else {
-      return small != null ? small(context, child) : medium != null ? medium(context, child) : large(context, child);
+      return small != null ? small!(context, child) : medium != null ? medium!(context, child) : large(context, child);
     }
     
   }

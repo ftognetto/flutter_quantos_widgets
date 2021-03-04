@@ -4,10 +4,10 @@ import 'package:flutter_quantos_widgets/src/responsive_widgets/breakpoints.dart'
 class ResponsiveWidget extends StatelessWidget {
 
   final Widget large;
-  final Widget medium;
-  final Widget small;
+  final Widget? medium;
+  final Widget? small;
 
-  const ResponsiveWidget({Key key, @required this.large, this.medium, this.small}) : super(key: key);
+  const ResponsiveWidget({Key? key, required this.large, this.medium, this.small}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

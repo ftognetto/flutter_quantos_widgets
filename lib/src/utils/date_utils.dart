@@ -23,7 +23,7 @@ class DateUtils {
 
   /// Parse di una data e return di una stringa
   /// [withTime] torna una stringa dd / MM / yyyy hh:mm
-  static String dateToString(DateTime date, { bool withTime }) {
+  static String dateToString(DateTime date, { bool? withTime }) {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     final yesterday = DateTime(now.year, now.month, now.day - 1);
@@ -69,7 +69,7 @@ class DateUtils {
     return '${(elapsed / msPerDay).round()} giorni fa';
   }
 
-  static DateTime parseDate(dynamic date) {
+  static DateTime? parseDate(dynamic date) {
     // parse data in forma di stringa o in forma di firestore
     if (date == null) return null;
     DateTime ret;

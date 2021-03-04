@@ -8,7 +8,7 @@ class ResponsiveChild extends StatelessWidget {
   final bool large;
   final bool medium;
 
-  const ResponsiveChild( { @required this.child, this.large = true, this.medium = true, Key key}) : super(key: key);
+  const ResponsiveChild( { required this.child, this.large = true, this.medium = true, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

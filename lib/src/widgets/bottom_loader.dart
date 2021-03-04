@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class BottomLoader extends StatelessWidget {
 
-  final bool loadedAll;
+  final bool? loadedAll;
   final bool sliver;
 
 
-  const BottomLoader({Key key, this.loadedAll, this.sliver = false}): super(key: key);
+  const BottomLoader({Key? key, this.loadedAll, this.sliver = false}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class BottomLoader extends StatelessWidget {
       child = _BottomLoader(); 
     }
     else{
-      child = loadedAll ? Container() : _BottomLoader();
+      child = loadedAll! ? Container() : _BottomLoader();
     }
     if (sliver) { return SliverToBoxAdapter(child: child); }
     else { return child; }
@@ -24,7 +24,7 @@ class BottomLoader extends StatelessWidget {
 }
 
 class _BottomLoader extends StatelessWidget {
-  const _BottomLoader({Key key}) : super(key: key);
+  const _BottomLoader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

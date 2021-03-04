@@ -4,15 +4,15 @@ import 'package:flutter_quantos_widgets/src/responsive_widgets/responsive_widget
 
 class ResponsiveScaffold extends StatelessWidget {
 
-  final Widget title;
-  final List<Widget> actions;
-  final Widget drawer;
+  final Widget? title;
+  final List<Widget>? actions;
+  final Widget? drawer;
   final Widget body;
   final Color color;
   final bool appBarExpanded;
   final double elevation;
 
-  const ResponsiveScaffold({Key key, this.title, this.appBarExpanded = false, this.actions, this.drawer, @required this.body, this.elevation = 0, this.color = Colors.black}) : super(key: key);
+  const ResponsiveScaffold({Key? key, this.title, this.appBarExpanded = false, this.actions, this.drawer, required this.body, this.elevation = 0, this.color = Colors.black}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class ResponsiveScaffold extends StatelessWidget {
               child: drawer != null 
                 ? Row(
                   children: <Widget>[
-                    drawer,
+                    drawer!,
                     Expanded(child: body)
                   ],
                 )
@@ -69,7 +69,7 @@ class ResponsiveScaffold extends StatelessWidget {
         body: drawer != null 
           ? Row(
             children: <Widget>[
-              drawer,
+              drawer!,
               Expanded(child: body)
             ],
           )

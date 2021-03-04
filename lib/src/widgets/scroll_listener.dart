@@ -10,7 +10,7 @@ class ScrollListener extends StatelessWidget {
 
   static final Throttling throttling = Throttling(duration: Duration(milliseconds: 500));
 
-  const ScrollListener({ Key key, @required this.child, @required this.onEndReach, this.treshold = 200 }) : super(key: key);
+  const ScrollListener({ Key? key, required this.child, required this.onEndReach, this.treshold = 200 }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class ScrollListener extends StatelessWidget {
           throttling.throttle(onEndReach);
           //onEndReach();
         }
-      },
+      } as bool Function(ScrollNotification)?,
     );
   }
 }
