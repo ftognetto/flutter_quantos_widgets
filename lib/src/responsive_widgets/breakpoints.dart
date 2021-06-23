@@ -7,9 +7,9 @@ class Breakpoints {
   static Breakpoints get instance => _api;
   Breakpoints._internal();
 
-  double _desktop = 992.0;
+  double _desktop = 1024.0;
   double _tablet = 768.0;
-  double _mobile = 576.0;
+  double _mobile = 600.0;
 
   double get desktop => _desktop;
   double get tablet => _tablet;
