@@ -1,3 +1,6 @@
+
+enum Breakpoint { DESKTOP, TABLET, MOBILE }
+
 class Breakpoints {
 
   static final Breakpoints _api = Breakpoints._internal();
