@@ -14,7 +14,7 @@ class CenterLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _color = color ?? Theme.of(context).accentColor;
+    final _color = color ?? Theme.of(context).progressIndicatorTheme.color ?? Theme.of(context).colorScheme.primary;
     Widget loading = SizedBox(
       width: bigger ? 50 : 33,
       height: bigger ? 50 : 33,
