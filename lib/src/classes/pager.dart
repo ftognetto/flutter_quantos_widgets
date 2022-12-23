@@ -5,8 +5,12 @@ class Pager {
   int _page;
   int _limit;
 
-  Pager(int limit) :
+  Pager([int? limit]) :
     _page = 0,
+    _limit = limit ?? 20;
+
+  Pager.from(int page, [int? limit]) :
+    _page = page,
     _limit = limit ?? 20;
 
   int get current => _page;
@@ -30,17 +34,14 @@ class Pager {
 
 class PagerCursor {
 
-  dynamic? _cursor;
+  dynamic cursor;
   int _limit;
 
-  PagerCursor(int limit):
+  PagerCursor([int? limit]):
     _limit = limit ?? 20;
 
-  dynamic? get cursor => _cursor;
-  set cursor(dynamic? cursor) => _cursor = cursor;
-
   void reset() {
-    _cursor = null;
+    cursor = null;
   }
 
   int get limit => _limit;
